@@ -3,6 +3,7 @@
 Créer un fichier .txt du nom de votre choix.
 La première ligne du fichier doit être le titre de votre graphe
 La deuxième ligne du fichier doit être le nom de vos axes séparés par un espace.
+La troisième ligne du fichier doit être la légende du graph.
 Le reste comprend vos données séparées par des espaces et des retours à la ligne.
 ### Example
 Hello World

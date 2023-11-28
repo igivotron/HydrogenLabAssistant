@@ -29,6 +29,13 @@ class FileExtractor:
         """
         return self.data[1].split(" ")
 
+    def get_legend(self):
+        """
+        Get the plot's legend
+        :return: str. Plot's legend
+        """
+        return self.data[2]
+
     def get_data(self, line = True):
         """
         Get the data without the plot's name and plot's axis names
@@ -38,16 +45,16 @@ class FileExtractor:
 
         if line :
             l = []
-            for i in range(len(self.data[2:])):
-                l.append(self.data[i+2].split(" "))
+            for i in range(len(self.data[3:])):
+                l.append(self.data[i+3].split(" "))
         else:
             c1 = []
             c2 = []
-            for i in range(len(self.data[2:])):
-                c1.append(self.data[i+2].split(" ")[0])
-                c2.append(self.data[i + 2].split(" ")[1])
+            for i in range(len(self.data[3:])):
+                c1.append(self.data[i+3].split(" ")[0])
+                c2.append(self.data[i + 3].split(" ")[1])
             l = [c1, c2]
         return l
 
     def __str__(self):
-        return "Plot's name : " + self.get_title() + "\n" + "Plot's axis name : " + str(self.get_axis()) + "\n" + "Data by lines : " + str(self.get_data())
+        return "Plot's name : " + self.get_title() + "\n" + "Plot's axis name : " + str(self.get_axis()) + "\n" + "Legend : " + self.get_legend() + "\n" + "Data by lines : " + str(self.get_data())
