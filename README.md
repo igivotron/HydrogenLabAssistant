@@ -19,6 +19,8 @@ FileManager permet d'extraire les données du fichier .txt de votre choix.
 Permet de récuperer le titre du graphique
 ### get_axis
 Permet de récuperer le nom des axes
+### get_legend
+Permet de récuperer la légende
 ### get_data(line=True)
 Permet de récuperer les informations contenues dans le fichier.
 Si line == True : Donne les informations ligne par ligne
