@@ -32,7 +32,7 @@ class FileExtractor:
     def get_data(self, line = True):
         """
         Get the data without the plot's name and plot's axis names
-        :param line: Boolean. If true return list by lines, else return by columns
+        :param line: Boolean. If true return list by line, else return by column
         :return: List. File's data without the plot's name and plot's axis names
         """
 
