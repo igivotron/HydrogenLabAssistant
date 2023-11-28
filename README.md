@@ -5,12 +5,12 @@ La première ligne du fichier doit être le titre de votre graphe
 La deuxième ligne du fichier doit être le nom de vos axes séparés par un espace.
 Le reste comprend vos données séparées par des espaces et des retours à la ligne.
 ### Example
-Hello World
-t x
-0 0
-1 5
-2 10
-3 15
+Hello World\n
+t x \n
+0 0 \n
+1 5 \n
+2 10 \n
+3 15 \n
 
 ## FileManager
 FileManager permet d'extraire les données du fichier .txt de votre choix.
