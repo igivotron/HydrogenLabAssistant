@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy
 import numpy as np
 class PlotMaker():
     def __init__(self, name, axis, data, legend):
@@ -62,6 +61,22 @@ class PlotMaker():
         plt.show()
 
 #\TODO Extrapolation
-
-
+    def plot_interp(self, d, data, begin=0, end=0, e=10):
+        """
+        Interpole les données
+        :param d: degré d'interpolation
+        :param data: list. Données à interpoler. [[t],[x]]
+        :param begin: début zone d'interpolation
+        :param end: fin zone d'interpolation
+        :param e: nombre d'échantillonage
+        :return:
+        """
+        data = np.array(data)
+        if end==0:
+            end = int(data[0][len(data[0])-1])
+        n = (end-begin) * e
+        x = np.linspace(begin, end, n)
+        c = np.polyfit(data[0], data[1], d)
+        y_pred = np.polyval(c,x)
+        return [x,y_pred]
 
