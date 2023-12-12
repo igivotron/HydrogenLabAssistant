@@ -11,3 +11,8 @@ F = 96500
 def faradayTheoreticalVolumeSpeed(T=298, I=1, p=1e10, z=4):
     return (R*T*I)/(p*z*F)
 
+p.plotdot()
+p.plotderivdot()
+p.save()
+
+p.show()
